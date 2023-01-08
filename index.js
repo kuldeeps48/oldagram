@@ -44,15 +44,21 @@ function render() {
                             <h3 class="location">${post.location}</h3>
                         </div>
                     </section>
-                    <img class="post-image db-click-like" ondblclick="liked(${i})" src="${post.post}">
+                    <img class="post-image db-click-like" ondblclick="${liked(
+                      i
+                    )}" src="${post.post}">
                     <section class="section-data">
                         <div class="buttons">
-                            <img class="heart-icon db-click-like" ondblclick="liked(${i})" src="images/icon-heart.png">
+                            <img class="heart-icon db-click-like" ondblclick="${liked(
+                              i
+                            )}" src="images/icon-heart.png">
                             <img class="comment-icon" src="images/icon-comment.png">
                             <img class="dm-icon" src="images/icon-dm.png">
                         </div>
                         <h3 class="likes">${post.likes} likes</h3>
-                        <h3 class="description">${post.username} <span class="lighter">${post.comment}</span></h3>
+                        <h3 class="description">${
+                          post.username
+                        } <span class="lighter">${post.comment}</span></h3>
                     </section>
                 </section>`;
   }
