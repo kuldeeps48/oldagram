@@ -69,7 +69,7 @@ function render() {
 render();
 
 function liked(postNumber) {
-  return function () {
+  return function f() {
     posts[postNumber].likes += 1;
     render();
   };
