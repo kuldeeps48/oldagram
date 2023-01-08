@@ -69,6 +69,8 @@ function render() {
 render();
 
 function liked(postNumber) {
-  posts[postNumber].likes += 1;
-  render();
+  return function () {
+    posts[postNumber].likes += 1;
+    render();
+  };
 }
